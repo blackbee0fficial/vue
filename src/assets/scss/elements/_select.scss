@@ -1,0 +1,140 @@
+.select {
+   width: 100%;
+   position: relative;
+
+   &--day,
+   &--year {
+      width: 28%;
+   }
+
+   &--month {
+      width: 38%;
+   }
+}
+
+.select-row {
+   position: relative;
+   padding: 6px 29px 6px 12px;
+   background-color: #fff;
+   border: 1px solid $borderColor;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+.select-title {
+   width: 100%;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow: hidden;
+
+   &-no {
+      color: silver;
+   }
+}
+
+.select-icon {
+   width: 15px;
+   height: 15px;
+   position: absolute;
+   right: 7px;
+   top: 7px;
+   background-image: url(../images/svg/arrow.svg);
+   background-position: center;
+   background-size: cover;
+}
+
+.select-wrapper {
+   width: 100%;
+   background-color: #fff;
+   border: 1px solid $borderColor;
+   position: absolute;
+   bottom: 100%;
+   z-index: 11;
+   opacity: 0;
+   visibility: hidden;
+   pointer-events: none;
+   overflow: hidden;
+}
+
+.select-body {
+   max-height: calc(27px * 9);
+   overflow-y: auto;
+
+   &::-webkit-scrollbar {
+      width: 2px;
+   }
+
+   &::-webkit-scrollbar-thumb {
+      background-color: #dbdaff;
+      border-radius: 21px;
+   }
+}
+
+.select-title--body {
+   padding: 5.5px 12px;
+   border-bottom: 1px solid #e1e4e8;
+   font-weight: 600;
+   color: #838383;
+   cursor: pointer;
+   transition: 0.007s;
+
+   &:hover {
+      opacity: 0.7;
+   }
+}
+
+.select-item {
+   padding: 6px 12px;
+   cursor: pointer;
+   position: relative;
+
+   &:hover {
+      background-color: #f3f5f6;
+   }
+
+   &--selected {
+      background-color: #e5ebf1 !important;
+   }
+
+   &--selected::before {
+      content: '';
+      width: 21px;
+      height: 21px;
+      display: block;
+      background-image: url(../images/svg/check.svg);
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      right: 5px;
+      top: 3px;
+      opacity: 1;
+      z-index: 99;
+   }
+}
+
+.select.active .select-wrapper {
+   opacity: 1;
+   visibility: visible;
+   pointer-events: auto;
+}
+
+.select.active.select-top .select-row {
+   border-radius: 0 0 4px 4px;
+}
+
+.select.active.select-bottom .select-row {
+   border-radius: 4px 4px 0 0;
+}
+
+.select.active.select-top .select-wrapper {
+   border-bottom: 0;
+   border-radius: 4px 4px 0 0;
+   bottom: 100%;
+}
+
+.select.active.select-bottom .select-wrapper {
+   border-top: 0;
+   border-radius: 0 0 4px 4px;
+   top: 100%;
+   bottom: auto;
+}

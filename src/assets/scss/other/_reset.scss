@@ -1,0 +1,89 @@
+*,
+*::after,
+*::before {
+   box-sizing: inherit;
+}
+
+html {
+   box-sizing: border-box;
+   -webkit-tap-highlight-color: #0000;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+   width: 100vw;
+   height: 100vh;
+   overflow: hidden;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b {
+   font-weight: $fontWeightBold;
+}
+
+img,
+video {
+   vertical-align: bottom;
+}
+
+ul {
+   padding: 0;
+   list-style: none;
+}
+
+input,
+button,
+select {
+   border: none;
+   color: inherit;
+   font-size: inherit;
+   font-family: inherit;
+}
+
+input:focus,
+button:focus,
+[tabindex]:focus,
+a:focus,
+video:focus,
+textarea:focus,
+[contenteditable],
+select {
+   outline: none;
+}
+
+label {
+   cursor: pointer;
+}
+
+a {
+   color: inherit;
+   text-decoration: none;
+}
+
+img,
+video,
+a {
+   -webkit-user-drag: none;
+}
+
+::selection {
+   background-color: #2daadb4d;
+}

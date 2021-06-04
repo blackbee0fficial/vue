@@ -1,0 +1,173 @@
+.form {
+   width: 540px;
+   padding: 30px 0;
+   background-color: #fff;
+   border-radius: 4px;
+}
+
+.form__title {
+   font-size: $fontSizeBig;
+   font-weight: $fontWeightBase;
+   text-align: center;
+   color: #000;
+}
+
+.form__subtitle {
+   padding: 15px 0;
+   text-align: center;
+}
+
+.form__header {
+   width: 100%;
+   height: 40px;
+   border-top: 1px solid #e5e5e5;
+   border-bottom: 1px solid #e5e5e5;
+
+   &-item {
+      width: 33.33%;
+      height: 100%;
+      line-height: 38px;
+      padding: 0 12px;
+      color: #636363;
+      text-align: center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      cursor: pointer;
+
+      &:not(.form__header--disabled) {
+         font-weight: 500;
+      }
+
+      &:not(.form__header--disabled):hover {
+         background-color: rgba(#5181b8, 0.25);
+      }
+   }
+
+   &--disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+   }
+
+   &--current {
+      background-color: rgba(#5181b8, 0.69) !important;
+      color: #fff;
+      opacity: 1;
+      cursor: default;
+   }
+}
+
+.form__body {
+   padding: 30px 15px;
+}
+
+.form__row {
+   margin-bottom: 15px;
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+}
+
+.form__label {
+   width: 185px;
+   height: 30px;
+   padding-right: 12px;
+   line-height: 30px;
+   text-align: right;
+   color: #747474;
+}
+
+.form__wrapper-input {
+   width: 270px;
+}
+
+.form__input {
+   width: 100%;
+   height: 30px;
+   padding: 0 10px;
+   border-radius: 3px;
+   border: 1px solid $borderColor;
+
+   &::placeholder {
+      color: silver;
+   }
+}
+
+.form__invalid {
+   padding: 10px 0 0;
+   color: #fe4646;
+}
+
+.form__radio {
+   position: absolute !important;
+   width: 1px !important;
+   height: 1px !important;
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}
+
+.form__radio-label {
+   width: 50%;
+}
+
+.form__sex {
+   width: 100%;
+   height: 30px;
+   line-height: 28px;
+   text-align: center;
+   background-color: #fff;
+   border: 1px solid $borderColor;
+
+   &--male {
+      border-radius: 3px 0 0 3px;
+
+      &:hover {
+         background-color: rgba(#87a8ce, 0.3);
+      }
+   }
+
+   &--female {
+      border-radius: 0 3px 3px 0;
+      border-left: none !important;
+
+      &:hover {
+         background-color: rgba(#ff849a, 0.3);
+      }
+   }
+}
+
+input[type='radio']:checked + .form__sex {
+   color: #fff;
+   font-weight: $fontWeightBold;
+}
+
+input[type='radio']:checked + .form__sex--male {
+   background-color: #87a8ce;
+}
+
+input[type='radio']:checked + .form__sex--female {
+   background-color: #ff849a;
+}
+
+.is-invalid .form__input,
+.is-invalid-select .select-row,
+.is-invalid .form__sex {
+   border: 1px solid #f88888;
+   background-color: rgba(#f88888, 0.15);
+}
+
+.is-success .form__input,
+.is-success .select-row,
+.is-success .form__sex {
+   border: 1px solid #7be87a;
+   background-color: #57ff7326;
+}
+
+.form__checkbox {
+   padding-top: 15px;
+}
+
+.form__checkbox-label {
+   padding-left: 10px;
+}

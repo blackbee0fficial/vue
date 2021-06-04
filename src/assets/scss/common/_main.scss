@@ -1,0 +1,16 @@
+.app {
+   width: 100vw;
+   height: 100vh;
+   font-size: $fontSizeBase;
+   font-family: $fontFamily;
+   overflow: hidden;
+   position: relative;
+   z-index: 9999;
+   overflow-y: scroll;
+   user-select: none;
+}
+
+.main {
+   width: 100%;
+   padding: 25px;
+}
